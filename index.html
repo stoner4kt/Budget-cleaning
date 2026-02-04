@@ -3,12 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Cleaning Solutions | Professional Cleaning Services You Can Trust</title>
-    <meta name="description" content="Professional cleaning services in Cape Town Southern Suburbs, Deep South, Peninsula & Hout Bay. Deep cleaning, spring cleaning, student accommodation, post renovation, and pre & post-occupation cleaning.">
+    <title>Budget Cleaning Solutions | Professional Cleaning Services Cape Town | Deep Cleaning, Spring Cleaning & More</title>
+    <meta name="description" content="Professional cleaning services in Cape Town Southern Suburbs, Deep South, Peninsula & Hout Bay. Deep cleaning, spring cleaning, student accommodation, post renovation, and pre & post-occupation cleaning. Contact us at 069 356 1527 for a free quote!">
+    <meta name="keywords" content="cleaning services cape town, deep cleaning, spring cleaning, student accommodation cleaning, post renovation cleaning, pre occupation cleaning, post occupation cleaning, window cleaning, professional cleaners, budget cleaning, fish hoek, southern suburbs, hout bay">
+    <meta name="author" content="Budget Cleaning Solutions">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://budgetcleaningsolutions.co.za/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budgetcleaningsolutions.co.za/">
+    <meta property="og:title" content="Budget Cleaning Solutions - Professional Cleaning Services Cape Town">
+    <meta property="og:description" content="Affordable, reliable cleaning services in Cape Town. Deep cleaning, spring cleaning, and more. Get your free quote today!">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://budgetcleaningsolutions.co.za/">
+    <meta property="twitter:title" content="Budget Cleaning Solutions - Professional Cleaning Services Cape Town">
+    <meta property="twitter:description" content="Affordable, reliable cleaning services in Cape Town. Deep cleaning, spring cleaning, and more.">
+    <meta property="twitter:image" content="images/hero-bg.jpg">
+    
+    <!-- Geo Location -->
+    <meta name="geo.region" content="ZA-WC">
+    <meta name="geo.placename" content="Fish Hoek, Cape Town">
+    <meta name="geo.position" content="-34.1367;18.4366">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Budget Cleaning Solutions",
+      "image": "images/hero-bg.jpg",
+      "description": "Professional cleaning services in Cape Town Southern Suburbs, Deep South, Peninsula & Hout Bay",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Fish Hoek",
+        "addressRegion": "Western Cape",
+        "postalCode": "7975",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27693561527",
+      "email": "info@budgetcleaning.co.za",
+      "url": "https://budgetcleaningsolutions.co.za",
+      "priceRange": "$$",
+      "areaServed": ["Cape Town Southern Suburbs", "Deep South", "Peninsula", "Hout Bay"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
+      ],
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -16,13 +79,18 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <div class="logo-text">
-                        <span class="budget">BUDGET</span>
-                        <span class="cleaning">CLEANING SOLUTIONS</span>
-                    </div>
-                    <div class="tagline">DOMESTIC HOME CLEANERS</div>
-                </div>
-                
+                   <a href="#home">
+        <img src="images/logo.png" alt="Budget Cleaning Solutions Logo" class="site-logo">
+    </a>
+    <div class="logo-text-container">
+        <div class="logo-text">
+            <span class="budget">BUDGET</span>
+            <span class="cleaning">CLEANING SOLUTIONS</span>
+        </div>
+        <div class="tagline">DOMESTIC HOME CLEANERS</div>
+    </div>
+</div>
+                    
                 <div class="nav-toggle" id="navToggle">
                     <span></span>
                     <span></span>
@@ -34,8 +102,8 @@
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#quote" class="btn btn-primary nav-cta">Free Quote</a></li>
+                    <li><a href="contactform.html" class="nav-link">Contact</a></li>
+                    <li><a href="contactform.html" class="btn btn-primary nav-cta">Free Quote</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +117,7 @@
                 <p class="hero-subtitle">Welcome to Budget Cleaning Solutions, your reliable and affordable cleaning partner in Cape Town Southern Suburbs, Deep South, Peninsula & Hout Bay. We provide high-quality residential cleaning services designed to keep your property spotless, hygienic, and stress-free.</p>
                 <p class="hero-tagline">Your Property, Our Priority.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Contact Us Today</a>
+                    <a href="contactform.html" class="btn btn-primary">Contact Us Today</a>
                     <a href="#services" class="btn btn-secondary">Our Services</a>
                 </div>
             </div>
@@ -70,113 +138,156 @@
                     <div class="service-icon">
                         <i class="fas fa-broom"></i>
                     </div>
-                    <h3>Deep Cleaning</h3>
+                    <h3><a href="services.html#deep-cleaning" class="service-link">Deep Cleaning</a></h3>
                     <p>Our Deep Cleaning service is a comprehensive, top-to-bottom clean designed for homes that need extra care and attention. This service goes beyond regular cleaning and focuses on built-up dirt, grime, and hard-to-reach areas that are often overlooked. Ideal for first-time clients, homes that haven't been professionally cleaned in a while, or before special occasions.</p>
+                    <a href="services.html#deep-cleaning" class="learn-more">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-sparkles"></i>
+                    <div class="service-icon spring-icon">
+                        <svg class="sunflower-icon" viewBox="0 0 100 100" width="50" height="50">
+                            <!-- Petals -->
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFD700" transform="rotate(0 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFC700" transform="rotate(45 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFD700" transform="rotate(90 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFC700" transform="rotate(135 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFD700" transform="rotate(180 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFC700" transform="rotate(225 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFD700" transform="rotate(270 50 50)"/>
+                            <ellipse cx="50" cy="20" rx="8" ry="15" fill="#FFC700" transform="rotate(315 50 50)"/>
+                            <!-- Center -->
+                            <circle cx="50" cy="50" r="12" fill="#8B4513"/>
+                            <!-- Seeds pattern -->
+                            <circle cx="47" cy="47" r="1.5" fill="#654321"/>
+                            <circle cx="53" cy="47" r="1.5" fill="#654321"/>
+                            <circle cx="47" cy="53" r="1.5" fill="#654321"/>
+                            <circle cx="53" cy="53" r="1.5" fill="#654321"/>
+                            <circle cx="50" cy="50" r="1.5" fill="#654321"/>
+                        </svg>
                     </div>
-                    <h3>Spring Cleaning</h3>
-                    <p>Spring Cleaning is perfect when your home needs a full refresh and reset. This service helps eliminate dust, allergens, and cluttered dirt that accumulate over time, leaving your space feeling lighter, fresher, and more organised. Ideal for seasonal changes, year-end cleans, or whenever your home needs a fresh start.</p>
+                    <h3><a href="services.html#spring-cleaning" class="service-link">Spring Cleaning</a></h3>
+                    <p>Our Spring Cleaning service offers a fresh start for your home as the seasons change. This is an in-depth seasonal cleaning service that targets seasonal buildup, clutter, and grime that accumulates over time. Perfect for preparing your home for warmer weather, special events, or when your home needs a complete refresh.</p>
+                    <a href="services.html#spring-cleaning" class="learn-more">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Student Accommodation Cleaning</h3>
-                    <p>We offer reliable and thorough cleaning services for student accommodation, including shared houses, apartments, and residence-style living. This service is ideal for end-of-lease clean-outs, room turnovers, or general cleans for existing students. A practical solution for landlords, parents, and students who need fast, effective cleaning at an affordable rate.</p>
+                    <h3><a href="services.html#student-accommodation" class="service-link">Student Accommodation Cleaning</a></h3>
+                    <p>Tailored for student housing, this service ensures student residences are cleaned and maintained to high standards. Whether it's a semester's end cleanup, routine maintenance, or post-vacation cleaning, we help maintain healthy living spaces for students.</p>
+                    <a href="services.html#student-accommodation" class="learn-more">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-hammer"></i>
                     </div>
-                    <h3>Post-Renovation Cleaning</h3>
-                    <p>After renovations or building work, dust and debris can settle throughout the home. Our Post-Renovation Cleaning service removes construction dust, paint splashes, residue, and leftover materials to make your home safe and livable again. We clean walls, floors, windows, surfaces, fixtures, and fittings with care.</p>
+                    <h3><a href="services.html#post-renovation" class="service-link">Post Renovation Cleaning</a></h3>
+                    <p>Renovations can leave behind dust, debris, and construction residue that requires specialized cleaning. Our Post Renovation Cleaning service is designed to restore your space to a pristine, livable condition after construction work is completed.</p>
+                    <a href="services.html#post-renovation" class="learn-more">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-key"></i>
                     </div>
-                    <h3>Pre & Post-Occupation Cleaning</h3>
-                    <p>Our Pre- and Post-Occupation Cleaning service ensures a property is spotless before new occupants move in or after previous occupants move out. This service is ideal for tenants, landlords, and property owners who want a smooth handover. We focus on kitchens, bathrooms, cupboards, floors, and all living spaces.</p>
+                    <h3><a href="services.html#pre-post-occupation" class="service-link">Pre & Post-Occupation Cleaning</a></h3>
+                    <p>Moving in or out? Our Pre & Post-Occupation Cleaning service ensures properties are spotless for new tenants or ready to be handed over after a move. This service is essential for landlords, property managers, and homeowners making transitions smooth and hassle-free.</p>
+                    <a href="services.html#pre-post-occupation" class="learn-more">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-window-restore"></i>
+                        <i class="fas fa-window-maximize"></i>
                     </div>
-                    <h3>Window Cleaning</h3>
-                    <p>Interior and exterior window cleaning for crystal clear views and enhanced natural light in your home.</p>
+                    <h3><a href="services.html#windows" class="service-link">Window Cleaning</a></h3>
+                    <p>Clean windows not only improve the appearance of your home but also allow natural light to brighten your space. Our professional window cleaning service ensures streak-free, sparkling results for all types of windows.</p>
+                    <a href="services.html#windows" class="learn-more">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Property Management Section -->
-    <section class="property-section">
+    <section class="property-section" id="property">
         <div class="container">
             <div class="property-grid">
                 <div class="property-content">
                     <h2>Property Management Services</h2>
-                    <p>Turnkey hassle-free range of services to keep your property in tip-top shape. Your property is our priority.</p>
+                    <p>We partner with property managers and landlords to maintain residential properties at the highest standards. Our specialized services ensure properties remain attractive, well-maintained, and ready for tenants.</p>
+                    
                     <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Regular maintenance cleaning</li>
-                        <li><i class="fas fa-check-circle"></i> Inventory management</li>
-                        <li><i class="fas fa-check-circle"></i> Key holding services</li>
+                        <li><i class="fas fa-check-circle"></i> Regular maintenance cleaning schedules</li>
+                        <li><i class="fas fa-check-circle"></i> Service Provider Management</li>
+                        <li><i class="fas fa-check-circle"></i> Key holding  services</li>
+                         Professional cleaning reports and doc</li>
                     </ul>
+                    
+                    <a href="contactform.html" class="btn btn-primary">Request a Property Management Quote</a>
                 </div>
+                
                 <div class="property-image">
-                    <!-- Image placeholder -->
-                    <div class="image-placeholder">
-                        <i class="fas fa-home"></i>
-                        <p>Property Management</p>
-                    </div>
+                    <img src="images/house.jpeg" alt="Property Management Cleaning Services" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Value Added Services -->
+    <section class="value-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Value Added Services</h2>
+                <p>Additional services to enhance your cleaning experience</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Instant Cash Offers</h3>
+                    <p>We buy all your unwanted furniture, as long as it is in good working order</p>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Garden Services Section -->
+    
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
                 <h2>About Budget Cleaning Solutions</h2>
-                <p>Who We Are</p>
+                <p>Your trusted cleaning partner in Cape Town</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Our Story</h3>
-                    <p>Budget Cleaning Solutions is a locally owned cleaning company based in Fish Hoek. We were founded with one simple goal: to provide dependable, high-quality cleaning services at prices that make sense.</p>
-                    
-                    <p>We understand that a clean space is essential for comfort, productivity, and peace of mind. That's why we take pride in delivering consistent results and professional service every time.</p>
+                    <h3>Who We Are</h3>
+                    <p>At Budget Cleaning Solutions, we are a dedicated team of professional cleaners committed to providing exceptional cleaning services to homes and properties across Cape Town's Southern Suburbs, Deep South, Peninsula, and Hout Bay areas. With years of experience in the cleaning industry, we understand what it takes to deliver results that exceed expectations.</p>
                     
                     <h3>Our Mission</h3>
-                    <p>To deliver affordable, efficient, and professional cleaning services while treating every property with care and respect.</p>
-                    
-                    <h3>Our Values</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Every job is Owner Supervised</li>
-                        <li><i class="fas fa-check-circle"></i> Reliability & punctuality</li>
-                        <li><i class="fas fa-check-circle"></i> Attention to detail</li>
-                        <li><i class="fas fa-check-circle"></i> Honesty & transparency</li>
-                        <li><i class="fas fa-check-circle"></i> Customer satisfaction</li>
-                    </ul>
+                    <p>Our mission is simple: to make your life easier by providing reliable, affordable, and high-quality cleaning services that leave your property spotless and hygienic. We believe that everyone deserves a clean and healthy living environment, and we're here to make that a reality.</p>
                     
                     <h3>Why Choose Us?</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Affordable, transparent pricing</li>
-                        <li><i class="fas fa-check-circle"></i> Reliable, professional, vetted cleaning staff</li>
-                        <li><i class="fas fa-check-circle"></i> Flexible bookings to suit your schedule</li>
-                        <li><i class="fas fa-check-circle"></i> Eco-friendly cleaning products</li>
-                        <li><i class="fas fa-check-circle"></i> Trusted by homeowners & landlords</li>
-                    </ul>
+                    <p><strong>Professional & Experienced Team:</strong> Our cleaners are trained, insured, and background-checked for your peace of mind. We use proven cleaning techniques and industry-standard equipment to deliver professional results every time.</p>
+                    
+                    <p><strong>Reliable & Trustworthy:</strong> We show up on time, every time, and treat your property with the respect it deserves. Your satisfaction is our priority, and we stand behind the quality of our work.</p>
+                    
+                    <p><strong>Affordable Pricing:</strong> High-quality cleaning doesn't have to break the bank. We offer competitive rates without compromising on service quality, making professional cleaning accessible to everyone.</p>
+                    
+                    <p><strong>Customized Solutions:</strong> Every property is unique, and so are its cleaning needs. We tailor our services to meet your specific requirements, whether it's a one-time deep clean or regular maintenance.</p>
+                    
+                    <p><strong>Eco-Friendly Options:</strong> We care about the environment and your health. That's why we offer eco-friendly cleaning solutions that are safe for your family, pets, and the planet.</p>
+                    
+                    <h3>Our Service Areas</h3>
+                    <p>We proudly serve Cape Town's Southern Suburbs, Deep South, Peninsula, and Hout Bay, including Fish Hoek and surrounding areas. If you're unsure whether we service your area, please don't hesitate to contact us.</p>
                 </div>
             </div>
         </div>
@@ -187,35 +298,26 @@
         <div class="container">
             <div class="section-header">
                 <h2>Cleaning Tips & Insights</h2>
-                <p>Expert advice and helpful information from our team</p>
+                <p>Expert advice to keep your home sparkling</p>
             </div>
             
             <div class="blog-grid">
                 <div class="blog-card">
-                    <div class="blog-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Spring Cleaning Essentials</h3>
-                    <p class="blog-date">Coming Soon</p>
-                    <p>Discover the best practices for seasonal cleaning and how to refresh your home from top to bottom.</p>
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Top 10 Cleaning Hacks for Busy Homeowners</h3>
+                    <p>Discover time-saving cleaning tricks that make maintaining a spotless home easier, even with a hectic schedule. From quick daily routines to smart storage solutions.</p>
                 </div>
                 
                 <div class="blog-card">
-                    <div class="blog-icon">
-                        <i class="fas fa-home-lg-alt"></i>
-                    </div>
-                    <h3>Moving Out Checklist</h3>
-                    <p class="blog-date">Coming Soon</p>
-                    <p>A comprehensive guide to ensuring your property is pristine when handing over keys to landlords or new owners.</p>
+                    <i class="fas fa-leaf"></i>
+                    <h3>The Benefits of Eco-Friendly Cleaning Products</h3>
+                    <p>Learn why switching to environmentally friendly cleaning solutions is better for your health, your family, and the planet. We explore natural alternatives that work.</p>
                 </div>
                 
                 <div class="blog-card">
-                    <div class="blog-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Eco-Friendly Cleaning</h3>
-                    <p class="blog-date">Coming Soon</p>
-                    <p>Learn about environmentally conscious cleaning methods and products that are safe for your family and the planet.</p>
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>How Often Should You Deep Clean Your Home?</h3>
+                    <p>Get expert recommendations on deep cleaning schedules for different areas of your home. Plus, signs that indicate it's time for a professional deep clean.</p>
                 </div>
             </div>
             
@@ -225,7 +327,133 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from satisfied customers</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Budget Cleaning Solutions transformed our home! Their deep cleaning service was incredibly thorough. Every corner sparkled and the team was professional and friendly. Highly recommend their services!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">SJ</div>
+                        <div class="review-author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Hout Bay, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"We used their post-renovation cleaning service and couldn't be happier. They removed all the construction dust and debris, making our newly renovated house feel like home. Excellent attention to detail!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">MV</div>
+                        <div class="review-author-info">
+                            <h4>Michael Van Der Berg</h4>
+                            <p>Fish Hoek, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"As a property manager, I rely on Budget Cleaning Solutions for all my pre and post-occupation cleans. They're always punctual, reliable, and deliver exceptional results. Best cleaning service in the Southern Suburbs!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">LN</div>
+                        <div class="review-author-info">
+                            <h4>Lisa Naidoo</h4>
+                            <p>Constantia, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I book their spring cleaning service twice a year and it's always worth it. The team goes above and beyond, and my home feels refreshed every time. Great value for money and eco-friendly options too!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">DM</div>
+                        <div class="review-author-info">
+                            <h4>David Miller</h4>
+                            <p>Simon's Town, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Perfect for our student accommodation needs! They cleaned our entire house thoroughly before move-out, and we got our full deposit back. Quick, efficient, and very affordable. Will definitely use them again!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">TK</div>
+                        <div class="review-author-info">
+                            <h4>Thabo Khumalo</h4>
+                            <p>Muizenberg, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Their window cleaning service is outstanding! Crystal clear results and they even cleaned the frames and sills. The team was careful with our furniture and left no mess behind. Couldn't ask for better service!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">EP</div>
+                        <div class="review-author-info">
+                            <h4>Emma Pieterse</h4>
+                            <p>Noordhoek, Cape Town</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -240,7 +468,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>budgetspringclean@gmail.com</p>
+                            <p>info@budgetcleaning.co.za</p>
                         </div>
                     </div>
                     
@@ -248,7 +476,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Phone / WhatsApp</h4>
-                            <p>069 256 1527</p>
+                            <p>069 356 1527</p>
                         </div>
                     </div>
                     
@@ -271,41 +499,13 @@
                     </div>
                 </div>
                 
-                <div class="contact-form" id="quote">
+                <div class="contact-form-cta">
                     <h3>Request a Free Quote</h3>
-                    <form id="quoteForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Email Address" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="Phone Number" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select id="service" required>
-                                <option value="" disabled selected>Select a Service</option>
-                                <option value="deep-cleaning">Deep Cleaning</option>
-                                <option value="spring-cleaning">Spring Cleaning</option>
-                                <option value="student-accommodation">Student Accommodation Cleaning</option>
-                                <option value="post-renovation">Post Renovation Cleaning</option>
-                                <option value="pre-post-occupation">Pre & Post-Occupation Cleaning</option>
-                                <option value="windows">Window Cleaning</option>
-                                <option value="property">Property Management</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Additional details about your cleaning needs..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">Request Free Quote</button>
-                    </form>
+                    <p>Ready to experience professional cleaning? Fill out our contact form and we'll get back to you within 24 hours with a customized quote.</p>
+                    <a href="contactform.html" class="btn btn-primary btn-block">Go to Contact Form</a>
+                    <div class="contact-showcase">
+                        <img src="images/cleaning2.jpeg" alt="Professional cleaning services showcase" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -333,25 +533,25 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="contactform.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Deep Cleaning</a></li>
-                        <li><a href="#services">Spring Cleaning</a></li>
-                        <li><a href="#services">Student Accommodation</a></li>
-                        <li><a href="#services">Post Renovation</a></li>
-                        <li><a href="#services">Pre & Post-Occupation</a></li>
+                        <li><a href="services.html#deep-cleaning">Deep Cleaning</a></li>
+                        <li><a href="services.html#spring-cleaning">Spring Cleaning</a></li>
+                        <li><a href="services.html#student-accommodation">Student Accommodation</a></li>
+                        <li><a href="services.html#post-renovation">Post Renovation</a></li>
+                        <li><a href="services.html#pre-post-occupation">Pre & Post-Occupation</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> 069 256 1527</p>
-                    <p><i class="fas fa-envelope"></i> budgetspringclean@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 069 356 1527</p>
+                    <p><i class="fas fa-envelope"></i> info@budgetcleaning.co.za</p>
                     <p><i class="fas fa-map-marker-alt"></i> Fish Hoek, Cape Town</p>
                 </div>
             </div>

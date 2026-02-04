@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Budget Cleaning Solutions</title>
+    <meta name="description" content="Get in touch with Budget Cleaning Solutions. Request a free quote for professional cleaning services in Cape Town. We respond within 24 hours!">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Budget Cleaning Solutions Logo" class="site-logo">
+                    </a>
+                    <div class="logo-text-container">
+                        <div class="logo-text">
+                            <span class="budget">BUDGET</span>
+                            <span class="cleaning">CLEANING SOLUTIONS</span>
+                        </div>
+                        <div class="tagline">DOMESTIC HOME CLEANERS</div>
+                    </div>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="contactform.html" class="nav-link active">Contact</a></li>
+                    <li><a href="contactform.html" class="btn btn-primary nav-cta">Free Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-page" id="contact">
+        <div class="container">
+            <div class="page-header">
+                <h1>Get In Touch</h1>
+                <p>Request a free, no-obligation quote and we'll respond within 24 hours</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@budgetcleaning.co.za" style="color: var(--light-text);">info@budgetcleaning.co.za</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone / WhatsApp</h4>
+                            <p><a href="tel:+27693561527" style="color: var(--light-text);">069 356 1527</a></p>
+                            <p><a href="https://wa.me/27693561527" target="_blank" style="color: var(--secondary-color);">Message us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Service Areas</h4>
+                            <p>Cape Town Southern Suburbs</p>
+                            <p>Deep South Peninsula</p>
+                            <p>Hout Bay</p>
+                            <p>Fish Hoek & Surrounding Areas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday – Friday: 8:00 AM – 5:00 PM</p>
+                            <p>Saturday: 9:00 AM – 12:00 PM</p>
+                            <p>Sunday & Public Holidays: Closed</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px;">Why Choose Us?</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Free, no-obligation quotes</li>
+                            <li><i class="fas fa-check-circle"></i> 24-hour response time</li>
+                            <li><i class="fas fa-check-circle"></i> Professional & experienced team</li>
+                            <li><i class="fas fa-check-circle"></i> Affordable, competitive pricing</li>
+                            <li><i class="fas fa-check-circle"></i> Eco-friendly cleaning options</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Request a Free Quote</h3>
+                    
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-message">
+                        <i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again or contact us directly.</span>
+                    </div>
+
+                    <form id="contactForm" action="send_email.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Full Name *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="area" name="area" placeholder="Area/Suburb *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" id="serviceDate" name="serviceDate" required>
+                            <label for="serviceDate" class="date-label">Date Service Required</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a Service *</option>
+                                <option value="Deep Cleaning">Deep Cleaning</option>
+                                <option value="Spring Cleaning">Spring Cleaning</option>
+                                <option value="Student Accommodation Cleaning">Student Accommodation Cleaning</option>
+                                <option value="Post Renovation Cleaning">Post Renovation Cleaning</option>
+                                <option value="Pre & Post-Occupation Cleaning">Pre & Post-Occupation Cleaning</option>
+                                <option value="Window Cleaning">Window Cleaning</option>
+                                <option value="Property Management">Property Management</option>
+                                <option value="Garden & Outdoor Cleaning">Garden & Outdoor Cleaning</option>
+                                <option value="Carpet & Upholstery Cleaning">Carpet & Upholstery Cleaning</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="propertySize" name="propertySize" placeholder="Property Size (e.g., 2-bedroom house, 3-bedroom flat)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Additional details about your cleaning needs... (Optional)"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; font-size: 0.9rem; color: var(--light-text);">
+                                <input type="checkbox" name="consent" required style="margin-right: 8px; width: auto;">
+                                I consent to Budget Cleaning Solutions contacting me via email or phone regarding my quote request.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Request Free Quote
+                        </button>
+
+                        <p style="margin-top: 15px; font-size: 0.85rem; color: var(--light-text); text-align: center;">
+                            * Required fields | We respond within 24 hours
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div style="margin-top: 60px; text-align: center; background: var(--white); padding: 40px; border-radius: 8px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">What Happens Next?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                    <div>
+                        <i class="fas fa-envelope-open-text" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 10px;">1. We Receive Your Request</h4>
+                        <p style="color: var(--light-text);">Your quote request goes directly to our team.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-calculator" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 10px;">2. We Prepare Your Quote</h4>
+                        <p style="color: var(--light-text);">We calculate a customized quote based on your needs.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-volume" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;"></i>
+                        <h4 style="margin-bottom: 10px;">3. We Contact You</h4>
+                        <p style="color: var(--light-text);">We reach out within 24 hours with your free quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-text">
+                            <span class="budget">BUDGET</span>
+                            <span class="cleaning">CLEANING SOLUTIONS</span>
+                        </div>
+                        <div class="tagline">DOMESTIC HOME CLEANERS</div>
+                    </div>
+                    <p>Professional cleaning services in Cape Town Southern Suburbs, Deep South, Peninsula & Hout Bay.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="contactform.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#deep-cleaning">Deep Cleaning</a></li>
+                        <li><a href="services.html#spring-cleaning">Spring Cleaning</a></li>
+                        <li><a href="services.html#student-accommodation">Student Accommodation</a></li>
+                        <li><a href="services.html#post-renovation">Post Renovation</a></li>
+                        <li><a href="services.html#pre-post-occupation">Pre & Post-Occupation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> 069 356 1527</p>
+                    <p><i class="fas fa-envelope"></i> info@budgetcleaning.co.za</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Fish Hoek, Cape Town</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Budget Cleaning Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Enhanced form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            // Hide previous messages
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+            
+            // Create form data
+            const formData = new FormData(form);
+            
+            // Send form via AJAX
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    successMsg.classList.add('show');
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Optional: Redirect to thank you page after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = 'thank-you.html';
+                    }, 2000);
+                } else {
+                    // Show error message
+                    errorText.textContent = data.message || 'Something went wrong. Please try again or contact us directly.';
+                    errorMsg.classList.add('show');
+                    errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorText.textContent = 'Network error. Please check your connection and try again.';
+                errorMsg.classList.add('show');
+                errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Request Free Quote';
+            });
+        });
+    </script>
+</body>
+</html>

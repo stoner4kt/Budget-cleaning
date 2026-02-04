@@ -49,27 +49,28 @@ quoteForm.addEventListener('submit', function(e) {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
+    const area = document.getElementById('area').value;
+    const serviceDate = document.getElementById('serviceDate').value;
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value;
     
     // Basic validation
-    if (!name || !email || !phone || !service) {
+    if (!name || !email || !phone || !area || !serviceDate || !service) {
         alert('Please fill in all required fields.');
         return;
     }
     
-    // In a real application, you would send this data to a server
-    // For demo purposes, we'll just show a success message
-    alert(`Thank you ${name}! Your quote request for ${service} has been received. We'll contact you at ${phone} or ${email} within 24 hours.`);
+    // Store form data (in a real application, you would send this to a server)
+    const formData = {
+        name, email, phone, area, serviceDate, service, message,
+        timestamp: new Date().toISOString()
+    };
     
-    // Reset form
-    quoteForm.reset();
+    // Store in sessionStorage for the thank you page (optional)
+    sessionStorage.setItem('lastSubmission', JSON.stringify(formData));
     
-    // Scroll to top for better UX
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    // Redirect to thank you page
+    window.location.href = 'thank-you.html';
 });
 
 // Set current year in footer

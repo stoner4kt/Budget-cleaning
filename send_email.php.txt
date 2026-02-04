@@ -1,0 +1,366 @@
+<?php
+/**
+ * Budget Cleaning Solutions - Contact Form Handler
+ * This script processes contact form submissions and sends emails to info@budgetcleaning.co.za
+ */
+
+// Set headers for JSON response
+header('Content-Type: application/json');
+
+// Enable error reporting for debugging (disable in production)
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+
+// Configuration
+$to_email = "info@budgetcleaning.co.za"; // Your client's email
+$from_email = "noreply@budgetcleaning.co.za"; // Sender email (should be from your domain)
+$website_name = "Budget Cleaning Solutions";
+
+// Function to sanitize input data
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// Function to validate email
+function validate_email($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+// Check if form is submitted via POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Initialize response array
+    $response = array(
+        'success' => false,
+        'message' => ''
+    );
+    
+    // Get and sanitize form data
+    $name = isset($_POST['name']) ? sanitize_input($_POST['name']) : '';
+    $email = isset($_POST['email']) ? sanitize_input($_POST['email']) : '';
+    $phone = isset($_POST['phone']) ? sanitize_input($_POST['phone']) : '';
+    $area = isset($_POST['area']) ? sanitize_input($_POST['area']) : '';
+    $service_date = isset($_POST['serviceDate']) ? sanitize_input($_POST['serviceDate']) : '';
+    $service = isset($_POST['service']) ? sanitize_input($_POST['service']) : '';
+    $property_size = isset($_POST['propertySize']) ? sanitize_input($_POST['propertySize']) : 'Not specified';
+    $message = isset($_POST['message']) ? sanitize_input($_POST['message']) : 'No additional message';
+    $consent = isset($_POST['consent']) ? true : false;
+    
+    // Validation
+    $errors = array();
+    
+    if (empty($name)) {
+        $errors[] = "Name is required";
+    }
+    
+    if (empty($email)) {
+        $errors[] = "Email is required";
+    } elseif (!validate_email($email)) {
+        $errors[] = "Invalid email format";
+    }
+    
+    if (empty($phone)) {
+        $errors[] = "Phone number is required";
+    }
+    
+    if (empty($area)) {
+        $errors[] = "Area/Suburb is required";
+    }
+    
+    if (empty($service_date)) {
+        $errors[] = "Service date is required";
+    }
+    
+    if (empty($service)) {
+        $errors[] = "Please select a service";
+    }
+    
+    if (!$consent) {
+        $errors[] = "You must consent to be contacted";
+    }
+    
+    // If there are validation errors
+    if (!empty($errors)) {
+        $response['message'] = implode(", ", $errors);
+        echo json_encode($response);
+        exit;
+    }
+    
+    // Format the service date
+    $formatted_date = date('d F Y', strtotime($service_date));
+    
+    // Create email subject
+    $subject = "New Quote Request from $name - $service";
+    
+    // Create email body (HTML format)
+    $email_body = "
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='UTF-8'>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f8f9fa;
+            }
+            .header {
+                background-color: #1a5f7a;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+            }
+            .content {
+                background-color: white;
+                padding: 30px;
+                border-radius: 0 0 5px 5px;
+            }
+            .field {
+                margin-bottom: 15px;
+                padding: 10px;
+                background-color: #f8f9fa;
+                border-left: 4px solid #159895;
+            }
+            .field-label {
+                font-weight: bold;
+                color: #1a5f7a;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .field-value {
+                color: #2c3e50;
+            }
+            .footer {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 2px solid #dee2e6;
+                font-size: 0.9em;
+                color: #5d6d7e;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h1>$website_name</h1>
+                <p>New Quote Request</p>
+            </div>
+            <div class='content'>
+                <p>You have received a new quote request from your website:</p>
+                
+                <div class='field'>
+                    <span class='field-label'>Name:</span>
+                    <span class='field-value'>$name</span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Email:</span>
+                    <span class='field-value'><a href='mailto:$email'>$email</a></span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Phone:</span>
+                    <span class='field-value'><a href='tel:$phone'>$phone</a></span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Area/Suburb:</span>
+                    <span class='field-value'>$area</span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Service Required:</span>
+                    <span class='field-value'>$service</span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Date Service Required:</span>
+                    <span class='field-value'>$formatted_date</span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Property Size:</span>
+                    <span class='field-value'>$property_size</span>
+                </div>
+                
+                <div class='field'>
+                    <span class='field-label'>Additional Message:</span>
+                    <span class='field-value'>$message</span>
+                </div>
+                
+                <div class='footer'>
+                    <p>This email was sent from the $website_name contact form.</p>
+                    <p>Received on: " . date('d F Y, H:i:s') . "</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    ";
+    
+    // Create plain text version for email clients that don't support HTML
+    $plain_text_body = "
+New Quote Request - $website_name
+
+Name: $name
+Email: $email
+Phone: $phone
+Area/Suburb: $area
+Service Required: $service
+Date Service Required: $formatted_date
+Property Size: $property_size
+
+Additional Message:
+$message
+
+---
+This email was sent from the $website_name contact form.
+Received on: " . date('d F Y, H:i:s') . "
+    ";
+    
+    // Email headers
+    $headers = array();
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-Type: text/html; charset=UTF-8";
+    $headers[] = "From: $website_name <$from_email>";
+    $headers[] = "Reply-To: $name <$email>";
+    $headers[] = "X-Mailer: PHP/" . phpversion();
+    
+    // Convert headers array to string
+    $headers_string = implode("\r\n", $headers);
+    
+    // Send email
+    $mail_sent = mail($to_email, $subject, $email_body, $headers_string);
+    
+    if ($mail_sent) {
+        // Success response
+        $response['success'] = true;
+        $response['message'] = 'Your quote request has been sent successfully! We will contact you within 24 hours.';
+        
+        // Optional: Send auto-reply to customer
+        send_auto_reply($email, $name, $service, $formatted_date);
+        
+    } else {
+        // Error response
+        $response['message'] = 'Sorry, there was an error sending your message. Please try again or contact us directly at ' . $to_email;
+    }
+    
+    echo json_encode($response);
+    
+} else {
+    // If not POST request
+    $response = array(
+        'success' => false,
+        'message' => 'Invalid request method'
+    );
+    echo json_encode($response);
+}
+
+/**
+ * Optional: Send auto-reply email to customer
+ */
+function send_auto_reply($customer_email, $customer_name, $service, $formatted_date) {
+    global $from_email, $website_name;
+    
+    $subject = "Thank You for Your Quote Request - $website_name";
+    
+    $auto_reply_body = "
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='UTF-8'>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f8f9fa;
+            }
+            .header {
+                background-color: #1a5f7a;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+            }
+            .content {
+                background-color: white;
+                padding: 30px;
+                border-radius: 0 0 5px 5px;
+            }
+            .highlight {
+                background-color: #fff3cd;
+                padding: 15px;
+                border-left: 4px solid #ff9800;
+                margin: 20px 0;
+            }
+            .footer {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 2px solid #dee2e6;
+                font-size: 0.9em;
+                color: #5d6d7e;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h1>$website_name</h1>
+                <p>DOMESTIC HOME CLEANERS</p>
+            </div>
+            <div class='content'>
+                <h2>Thank You, $customer_name!</h2>
+                <p>We have received your quote request for <strong>$service</strong> on <strong>$formatted_date</strong>.</p>
+                
+                <div class='highlight'>
+                    <p><strong>What happens next?</strong></p>
+                    <p>Our team will review your request and prepare a customized quote for you. We will contact you within the next 24 hours via phone or email.</p>
+                </div>
+                
+                <p>In the meantime, if you have any urgent questions, please don't hesitate to contact us:</p>
+                <ul>
+                    <li><strong>Phone/WhatsApp:</strong> 069 356 1527</li>
+                    <li><strong>Email:</strong> info@budgetcleaning.co.za</li>
+                </ul>
+                
+                <p>Thank you for choosing $website_name!</p>
+                
+                <div class='footer'>
+                    <p><strong>Budget Cleaning Solutions</strong><br>
+                    Professional Cleaning Services | Cape Town Southern Suburbs<br>
+                    Fish Hoek, Cape Town | 069 356 1527</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    ";
+    
+    $headers = array();
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-Type: text/html; charset=UTF-8";
+    $headers[] = "From: $website_name <$from_email>";
+    $headers[] = "Reply-To: $website_name <info@budgetcleaning.co.za>";
+    
+    $headers_string = implode("\r\n", $headers);
+    
+    mail($customer_email, $subject, $auto_reply_body, $headers_string);
+}
+?>
