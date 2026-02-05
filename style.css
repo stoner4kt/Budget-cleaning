@@ -205,7 +205,7 @@ a {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
     color: var(--white);
-    padding: 180px 0 100px;
+    padding: 150px 0 80px;
     position: relative;
     margin-top: 70px;
     min-height: 500px;
@@ -259,7 +259,7 @@ a {
 /* Services Section */
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .section-header h2 {
@@ -274,7 +274,7 @@ a {
 }
 
 .services {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--light-bg);
 }
 
@@ -317,14 +317,14 @@ a {
 
 /* Property Management Section */
 .property-section {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
 .property-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 35px;
     align-items: center;
 }
 
@@ -385,7 +385,7 @@ a {
 
 /* Value Added Services */
 .value-services {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--light-bg);
 }
 
@@ -422,7 +422,7 @@ a {
 
 /* Gallery Showcase Section */
 .gallery-showcase {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
@@ -489,14 +489,14 @@ a {
 
 /* Garden Services Section */
 .garden-section {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
 .garden-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 35px;
     align-items: center;
 }
 
@@ -508,7 +508,7 @@ a {
 
 /* About Section */
 .about {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
@@ -536,7 +536,7 @@ a {
 
 /* Blog Section */
 .blog {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--light-bg);
 }
 
@@ -584,7 +584,7 @@ a {
 
 /* Reviews Section */
 .reviews {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
@@ -667,7 +667,7 @@ a {
 
 /* Contact Section */
 .contact {
-    padding: 80px 0;
+    padding: 50px 0;
     background-color: var(--white);
 }
 
@@ -2142,5 +2142,46 @@ img {
     
     .cta-content p {
         font-size: 1.05rem;
+    }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-float i {
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
     }
 }
